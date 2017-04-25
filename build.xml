@@ -18,6 +18,7 @@
                 <exclude name="composer.*"/>
                 <exclude name="demo.txt"/>
                 <exclude name="pax_global_header"/>
+                <exclude name="README.md"/>
             </fileset>
         </move>
         <mkdir dir="dist/userfiles/plugins/quoteoftheday"/>
