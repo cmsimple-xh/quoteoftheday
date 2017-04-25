@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Helpfile: Quoteoftheday</title>
+<style type="text/css">
+body {background: #eaf4fb; font: normal normal normal 12pt/1.6 'trebuchet MS',sans-serif}
+.notice {margin-left:3em; font-style:italic; color:#050; font-size:92%;}
+.new {margin:0 0 0 3em;font-size:92%; color:#400}
+code {font-family: consolas, 'courier new', monospace; font-weight:bold; font-size: 90%; color:#900;}
+body div {width: 940px; margin: 3em auto; background: #eee; border: 1px solid #5ab; padding: 0;box-shadow: 0em 0em 2em 0em #bbd;border-radius: 4.5em;}
+body div div {width: 760px; margin: 30px auto; background: #fff; border: 2px solid #8de; padding: 0 56px 3em;border-radius: 3em;}
+p {margin:1em 0;}
+em, b {font-weight: bold; color:#004;}
+.red {color:red;font-weight:bold;}
+h2, h3, h4, h5, h6 {font-family: Georgia; color: #099;margin:1.5em 0 0;}
+h1 {font: normal normal 30pt Georgia, 'Times new roman', serif;margin:1em 0;color: #068; }
+</style>
+
+
+</head>
+<body>
+<div>
+<div>
+<h1>Vítejte v Quoteoftheday_XH 0.8</h1>
+
+<h4>Testováno v CMSimple_XH 1.5.3 a CMSimple 3.4</h4>
+
+<h3>Aktualizace z 0.5 a starších</h3>
+<p>Nainstalujte novou verzi pro zachovaní Vašeho původního souboru ho přejmenujte quoteoftheday/data/quote_xx.txt. Přejděte do hlavního nastavení pluginu quoteoftheday a za každý citát vložte nový oddělovač (defaultně: ===). Můžete též vložit značku pro druhý řádek citátu (defaultně: - ) pro každý druhý řádek jednotlivých citátů. Uložte změny. Zadejte titulek, přiřaťe náhodné nebo sekvenční (postupné) zobrazování a uložte.</p>
+<h3>Aktualizece z 0.6 a 0.7</h3>
+<p>Nainstalujte novou verzi pro zachovaní Vašeho původního souboru ho přejmenujte quoteoftheday/data/quote_xx.txt. Přejděte do hlavního nastavení pluginu quoteoftheday.
+Zadejte titulek, přiřaťe náhodné nebo sekvenční (postupné) zobrazování a uložte.
+
+<h2>Vkládání a úprava citátů</h2>
+<ul>
+<li>Prečtěte si pokyny nad editačním oknem v hlavním nastavení pluginu.</li>
+<li>Citáty jsou závislé na jazyku. Pro každý jazyk tedy můžete mít vlastní soubor citátů. Citáty v rámci jednoho jazyka se mohou též opakovat.</li>
+<li>Oddělovač (např. ===) může být doplněn (před i za) prázdnými řádky pro lepší přehlednost. Nemá to však žádný vliv na konečné zobrazení.</li>
+<li>Pokud řádek začíná značkou (např. -), použije se specifické formátování. Značka může být doplněná (před i za) prázdné řádky pro lepší přehlednost. Ani toto však nemá žádný vliv na konečné zobrazení.
+</li>
+<li>Nový odstavec vždy začíná po prázdném řádku, nebo po dosažení značky na začátku řádku. Pro jednoduché zalomení použijte / na konci řádku.</li>
+</ul>
+
+<h2>Nastavení v jazykovém souboru</h2>
+<ul>
+    <li><em>náhodně:</em> Chcete-li, aby se Vaše citáty zobrazovaly v náhodném pořadí, napíšte sem cokoli, např. <code>ano</code>.
+    Náhodný výběr je vhodný, pokud máte více než 20 citátů. Pokud nic nezadáte, zobrazování bude sekvenční. V první den v roce (1. leden) se zobrazí citát č.1, v další den citát č.2 atd, až po poslední citát, po kterém se začnou znovu postupně zobrazovat citáty od č.1.</li>
+    <li><em>headline:</em> Pokud chcete Vaše citáty zobrazovat pod nějakým společným nadpisem, můžete v nastavení jazyka uvést např.: <code>Můj citát pro tento den</code>.</li>
+</ul>
+
+<h2>Css Stylování</h2>
+    <ul>
+    <li>Citáty jsou vždy umístěny do kontejneru <code>&lt;div class="quoteoftheday"></code>.
+    Pomocí css tedy můžete tento kontejner libovolně upravovat (pozadí, okraje, barvy, písmo, zarovnání, obtékání a pod.).</li>
+    <li>Samotné řádky citátů jsou vkladány jako odstavce <code>&lt;p></code>.
+    Když začnete nový řádek značkou, vytvoří se nový odstavec <code>&lt;p class="quoteline2"></code> (nebo 3, nebo 4).
+    Pro tento případ jsou (mohou být) vytvořeny samostatné CSS třídy. Prohlédněte si obsah anglického souboru, aby jste viděli, jak se to dělá.</li>
+    </ul>
+
+
+<h2>Použití Quoteoftheday</h2>
+<ul>
+<li>na konkrétní stránce:<br>
+<code>{{{PLUGINS:quoteoftheday();}}}</code> standardní soubor citátů,
+<code>{{{PLUGIN:quoteoftheday('NAZEV_SOUBORU');}}}</code> ze specifického souboru "nazev_souboru"</li>
+<li>v šabloně (templatu):<br><code>&lt;?php echo quoteoftheday(); ?></code> nebo <code>&lt;?php echo quoteoftheday('NAZEV_SOUBORU'); ?&gt;</code></li>
+</ul>
+</div></div>
+</body>
+</html>

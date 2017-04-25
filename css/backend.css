@@ -1,0 +1,93 @@
+.quote_input {
+    border:1px solid #bbb;
+    background:white;
+    color:black;
+    font-family:monospace;
+    padding:0;
+}
+form textarea.quote_input {
+    height:600px;
+    margin:2px 0;
+    width:100%;
+    border:.2em solid #89b;
+}
+input.quote_headline {
+    width:100%;
+    display:table-cell;
+    font-size:16px;
+    font-size: 1rem;
+}
+.quote_hide {
+    display:none;
+}
+.quote_show {
+    display:block;
+}
+.quote_active {
+    border-style:inset;
+    background:#eef;
+}
+.quote_regroup {
+    text-align:right;
+}
+.quote_admin {
+    min-height:60em;
+}
+.quote_admin button {
+    min-width:2em;
+}
+.quote_instructions {
+    margin-bottom:2em;
+}
+
+
+/* the following code is adapted from Opera's Neil Jenkins, from
+http://www.alistapart.com/articles/expanding-text-areas-made-elegant/ */
+textarea,
+pre {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    width:100%;
+}
+
+.expandingArea {
+    position: relative;
+    border: 2px inset #888;
+    /* margin-top:2px; */
+    background: #fff;
+}
+.expandingArea > textarea,
+.expandingArea > pre {
+    padding: 2px;
+    background: transparent;
+    font: normal normal 1em Consolas, monospace;
+    /* Make the text soft-wrap */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.expandingArea > textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.expandingArea.active > textarea {
+    /* Hide any scrollbars */
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Remove WebKit user-resize widget */
+    resize: none;
+}
+.expandingArea > pre {
+    display: none;
+}
+.expandingArea.active > pre {
+    display: block;
+    /* We don't actually want to see this text, it's just for sizing */
+    visibility: hidden;
+}

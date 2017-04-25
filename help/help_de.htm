@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Zitat des Tages</title>
+<style type="text/css">
+body {
+    background: #999;
+    background-image: -moz-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: -webkit-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: -o-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: -ms-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-attachment:fixed;
+    font: normal normal normal 12pt/1.6 'trebuchet MS',sans-serif
+}
+.notice {margin-left:3em; font-style:italic; color:#050; font-size:92%;}
+.new {margin:0 0 0 3em;font-size:92%; color:#400}
+code, td:first-child {font-family: consolas, 'courier new', monospace; font-weight:bold; font-size: 90%; color:#900;}
+body div {width: 940px; margin: 3em auto; background: #eee; border: 1px solid #555; padding: 0;box-shadow: 0em 0em 2em 0em #bbb;border-radius: 4.5em;}
+body div div {width: 760px; margin: 30px auto; background: #fff; border: 2px solid #bbb; padding: 0 56px 3em;border-radius: 3em;}
+p {margin:1em 0;}
+strong {font-weight: bold; color:#004;}
+.red {color:#a00;font-weight:bold;}
+h2, h3, h4, h5, h6 {font-family: Georgia; color: #267;margin:1.5em 0 0;}
+h1 {font: normal normal 30pt Georgia, 'Times new roman', serif;margin:1em 0;color: #068; }
+table {width:100%; border-collapse:collapse;}
+table, th, td {border: 1px solid black;}
+td {padding:2px 1px 3px 6px;}
+th {background:#eee;}
+td:first-child {font-size:100%;text-align:center;width:8em;}
+td:first-child em{font-weight:normal;color:black}
+td p {margin:0}
+</style>
+
+
+</head>
+<body>
+<div>
+<div>
+<h1>Quoteoftheday_XH 1.1</h1>
+
+<p class="red">Für CMSimple_XH >= 1.5.4 oder CMSimple 4.x</p>
+
+<p><b>"Zitat des Tages"</b> erzeugt einen div-Bereich, in dem ein Zitat, Spruch, Bild oder ähnliches erscheint. Dieses stammt aus einer Backend eingegebenen Liste von Sprüchen/Zitaten. Ein neues Zitat wird täglich, wöchentlich oder monatlich ausgewählt, nach Zufall oder nach vorgegebener Reihenfolge.</p>
+<p>Die Zitate werden als Textdaten mit Auszeichnungskürzeln eingegeben, ähnlich der Texteingabe in <a href="http://www.wikimatrix.org/syntax.php" target="_blank">Wikis</a>.</p>
+
+<h3>Neu in Version 1.1</h3>
+<ul>
+<li>Verbesserte Zierrahmen-CSS, jetzt durchgängig "responsive", d.h. Zitate werden auch in Smartphone passend angezeigt</li>
+<li>Voreingestellter Speicherort für Zitate jetzt in den Userfiles. Speicherort kann in der Konfig per Optionsliste aus Userfiles, Plugin und Content ausgewählt werden.</li>
+<li>Kleine Verbesserungen in der Administrationsansicht.</li>
+</ul>
+
+<h3>Neu in Version 1.0</h3>
+<ul>
+<li>Zum Text zusätzlich auch Links, Bilder, Sound möglich. <br>Links in Haupt- und Zweitsprache sind verschieden. Diese Links werden generiert, wenn das Zitat vom Plugin am Tagesanfang ausgewählt wird. Wenn man dieselbe Zitatdatei in Haupt- und Zweitsprache nutzt, stimmen nur die Links in der Sprache, in der zuerst das Zitat ausgewählt wurde. Wenn man hingegen zwei identische Zitatdateien nutzt, eine für jeweils eine Sprache, funktioniert es. Reine Text-Zitatsammlungen ohne Bilder etc. funktionieren hingegen überall gleichzeitig..</li>
+<li>Zusätzliche Formatierungsmöglichkeiten</li>
+<li>Auswahl verschiedener Zitatrahmen</li>
+<li>Filebrowsereinbindung: Quoteoftheday enthält jetzt neben dem Ordner <code>quoteoftheday</code> die Datei <code>script.php</code> für die Dateiübergabe mit dem Filebrowser (zur Vereinfachung bereits im Ordner 'filebrowser/editorhooks/quoteoftheday/' enthalten). Die entpackte Quoteoftheday-zip-Datei besteht aus den Ordner "plugins", der alles an richtiger Stelle enthält. Dieser Ordner kann direkt ins XH-Basisverzeichnis kopiert werden.</li>
+<li>Zitat-Einzelansicht mit Vorschau, Umsortierungs- und Löschmöglichkeit neben der bisherigen Gesamtansicht aller Zitate.</li>
+<li>Bugfix (in 0.8 und 0.9 wurde bei mehreren Zitatdateien nach der Vorschau immer auf die Standarddatei zurückgesetzt. Jetzt behoben!)</li>
+</ul>
+
+<h3>Update auf 1.1</h3>
+<p><strong>Sicherungskopien</strong> ersparen Ärger, falls etwas nicht so abläuft wie erwartet.</p>
+<p>Die entpackte neue Quoteoftheday-zip-Datei direkt ins XH-Basisverzeichnis kopieren. Sie überschreibt die alte quoteoftheday Installation, dem Filebrowser-Plugin wird eine Datei hinzugefügt, den Userfiles wird ein Ordner zum Speichern der Zitate hinzugefügt. Vorhandene Zitatlisten bleiben erhalten, Konfigurationseinstellungen müssen neu eingeben werden.</p>
+
+<p>Hatte man die CSS-Datei angepasst, sollte man die Anpassungen <strong><u>vor</u></strong> dem Update an anderer Stelle sichern und sie anschließend als eine eigene "Rahmen"-Klasse in der CSS-Datei speichern, wie im nächsten Abschnitt beschrieben.</p>
+
+<p>Bei Update von Version 0.5 und älter ist der Zitattrenner "<code>===</code>" nach jedem Zitat sowie gegebenenfalls das Kürzel für den Zitatautor-Absatz "<code>-</code>" neu einzugeben.</p>
+
+<h2>Rahmen</h2>
+<p>Die Zitate sind in auswählbaren Rahmen eingebettet. Programmtechnisch handelt es sich um einen div-Abschnitt mit auswählbarer CSS-Klasse, deren Namen in der Zitat-Datei gespeichert wird. Um zusätzliche (Rahmen-)Klassen zu erstellen braucht man nur in der Stylesheet.css eine neue Klasse einzutragen, deren Name mit <code>.quote_</code> beginnt.</p>
+
+<p>Bestehende Rahmen-Klassen kann man leicht anpassen, z.B.:</p>
+<ul>
+ <li>Eine andere Breite des Zitatrahmens: Dazu ändert man den Wert bei <code>max-width</code>.</li>
+ <li>Abstand innerhalb des Rahmens zum Text. Bei einigen Rahmen steht eine Anweisung wie <code>.quote_Grunge p:last-of-type {margin-bottom:0;}</code>, d.h. nach dem letzten Absatz fällt der Absatzabstand weg. Eventuell will man das nicht. Dann gibt es die Angabe <code>.quoteoftheday h4, .quoteoftheday h5 {margin-top:0;}</code>,  die bewirkt, dass die Überschrift keinen Abstand zum oberern Rahmenrand hat. Hier könnte man auch gut Änderungen durchführen. </li>
+ <li>Eventuell möchte man die Schriftfarbe neu definieren, z.B. durch <code>color:black;</code>.</li>
+ <li>Floatende Bilder können nach unten manchmal den Rahmen überlappen, das kann man mit <code>clear:both;</code> in der Klassenanweisung verhindern. Bei manchen Templates verrutscht dann allerdings das Design, da muss man im Einzelfall entscheiden.</li>
+</ul>
+
+<h2>Aufrufen von Quoteoftheday</h2>
+<ul>
+<li>im Seitentext ab XH 1.6.5:<br> <code>{{{quoteoftheday}}}</code> oder <code>{{{quoteoftheday 'Dateiname'}}}</code>. Die Dateiendung <code>.txt</code> braucht nicht angegeben zu werden. <br> Vor XH 1.6.5 gilt die ältere Methode:<br>
+<code>{{{PLUGIN:quoteoftheday('Dateiname');}}}</code>. <br>
+<strong>Wichtig: </strong>Ein Fehler in XH 1.6.5 und 1.6.6 (behoben in 1.6.7) führte dazu, dass ein Pluginaufruf, der mit <code>PLUGIN:</code> beginnt, die vorausgegangenen ohne <code>PLUGIN:</code> unterdrückte. Wenn Sie also mehrere Plugins auf einer Seite aufrufen, empfiehlt es sich daher auf 1.6.7 upzudaten oder immer dieselbe Aufrufmethode zu nutzen.</li>
+<li>Im Template:<br><code>&lt;?php echo quoteoftheday(); ?&gt;</code> bzw. <code>&lt;?php echo quoteoftheday('Dateiname'); ?&gt;</code></li>
+</ul>
+
+<h2>Zitate eingeben</h2>
+<p>Voreingestellt ist die <strong>Standardzitatdatei,</strong> der jeweilig eingestellten Sprache, z.B. für deutsch <code>quote_de.txt</code>. Statt die Standardzitatdatei auszuwählen kann man auch quote_de.txt wählen, was das gleiche bewirkt. Über das Auswahlmenü können weitere Zitatdateien erstellt oder gelöscht werden (Dateinamen dürfen keine Leerzeichen und Umlaute enthalten). Durch Pluginaufruf mit Zitatdateinamen können Zitate aus verschiedenen Zitatdateien gezeigt werden.</p>
+<table>
+<tbody>
+<tr><th>Code</th><th>Anwendung</th></tr>
+<tr>
+<td>===</td>
+<td><strong>Zitattrenner,</strong> trennt die Zitate untereinander.</td>
+</tr>
+<tr>
+<td>Leerzeile</td>
+<td><strong>Ein neuer Absatz</strong> innerhalb eines Zitats wird erst durch eine Leerzeile oder die Nutzung eines Kürzels zum Zuweisen einer Klasse hervorgerufen. <strong>Ein einfacher Zeilenumbruch bewirkt <u>keine neue Zeile.</u></strong></td>
+</tr>
+<tr>
+<td>/</td>
+<td><u>Am Zeilenende:</u> Umbruch zur neuen Zeile innerhalb des Absatzes, z.B. für Gedichte.</td>
+</tr>
+<tr>
+<td>**<em>...</em>**<br>//<em>...</em>//<br> __<em>...</em>__</td>
+<td><strong>fett</strong><br><em>kursiv</em><br><span style="text-decoration: underline;">unterstrichen</span></td>
+</tr>
+<tr>
+<td><em>Absatzkürzel:</em><br>-<em>Text...</em><br>?<em>Text...</em><br>!<em>Text...</em><br>%<em>Text...</em><br>%%<em>Text...</em></td>
+<td><u>Am Zeilenanfang:</u> Erzeugt neuen formatierten Absatz:<br>— Spiegelstrich und rechtsbündig (für Autoren-Nennung)<br>kleinere Schrift<br>größere Schrift<br>zentriert (bei Kombination an 2. Stelle, z.B. <code>!%</code>)<br>rechtsbündig (bei Kombination an 2. Stelle)</td>
+</tr>
+<tr>
+<td>* <em>Text...</em><br>* <em>Text...</em></td>
+<td>
+<ul>
+<li>Text</li>
+<li>Text</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td># <em>Text...</em><br># <em>Text...</em></td>
+<td><ol>
+<li>Text</li>
+<li>Text</li>
+</ol></td>
+</tr>
+<tr>
+<td>2-4 Leerzeichen</td>
+<td><u>Am Zeilenanfang:</u> Erzeugt neue Zeile mit <strong>Zeileneinzug,</strong> funktioniert auch innerhalb von Listen, erzeugt keinen neuen Absatz.</td>
+</tr>
+<tr>
+<td>><br>>><br>>>></td>
+<td><u>Am Zitatanfang:</u><br>Wenn der Zitatrahmen zu breit ist, kann man das gesamte Zitat in drei Stufen weiter in die Mitte rücken.</td>
+</tr>
+<tr>
+<td>[[<em>URL</em>|<em>Text</em>]]</td>
+<td>Erzeugt einen Link, z.B. <br>extern: [[http://cmsimple-xh.org|XH-Website]] <br>intern: [[?Startseite|zur Startseite]]</td>
+</tr>
+<tr>
+<td><br>{{<em>Bild.jpg</em>}}<br><br><br><br>{{ <em>Bild.jpg</em>}}<br>{{<em>Bild.jpg</em> }}<br>{{ <em>Bild.jpg</em> }}<br><br>{{<em>Bild.jpg</em>|<em>width="300"</em>}}<br>{{ <em>Bild.jpg</em> |<em>width="300"</em>}}<br><br>{{<em>...</em>|<em>style="width:300px"</em>}}<br>{{<em>...</em>|<em>alt="xxx"</em>}}<br>%{{<em>Bild.jpg</em>}}<br>%%{{<em>Bild.jpg</em>}}</td>
+<td><strong>Bilddateien</strong> werden mit dem Filebrowser an der Cursorposition eingefügt und haben ein automatisch generiertes alt-Attribut.<br><br>Bitte beachten: Die <strong>Positionen der Leerzeichen</strong> innerhalb von {{...}} steuern die Bildausrichtung!<br>Rechts floatend<br>Links floatend<br>Zentriert<br><br>Auf Breite von 300px gesetzt.<br>Zentriert und auf Breite von 300px gesetzt.<br><br>Alternative für Breite oder andere CSS-Werte.<br>Mit xxx als alt-Attribut statt automatisch generiertem.<br>Bilder können (ohne Floating) auch mit Absatzkürzeln mittig <br>oder nach rechts gesetzt werden.</td>
+</tr>
+<tr>
+<td>{{<em>Sound.mp3</em>}}</td>
+<td><strong>Audio-Dateien,</strong> (mp3, wav, ogg) werden wie Bilddateien mit dem Filebrowser eingefügt und enthalten automatisch ein title-Attribut. <br>Der Browser zeigt an dieser Stelle seinen eingebauten Player, je nach Browser leicht unterschiedlich, bei Firefox z.B.:<br><img src="player.png" alt="player.png, 2,3kB" title="Player" height="35" width="300"><br>Praktischerweise setzt man den Player in einen eigenen Absatz, d.h. an erster Stelle im Zitat oder mit einer Leerzeile vor und nach der Audio-Datei oder mit einem Absatzkürzel, z.B. <code>%</code> vor der Audio-Datei, damit der Player keinen Text überlappt.<br><small>Für den Player is kein Floating vorgesehen wie bei Bildern. Es ist auch kein Flash-Fallback eingebaut, im Internet Explorer 8 erscheint deshalb nichts.</small></td>
+</tr>
+<tr>
+<td>%{{<em>Sound.mp3</em>}}<br><br>{{<em>Sound.ogg,mp3</em>}}<br><br>{{<em>Sound.mp3</em>|<em>autoplay</em>}}<br>{{<em>Sound.mp3</em>|<em>loop</em>}}<br>{{<em>...</em>|<em>autoplay loop</em>}}<br>{{<em>...</em>|<em>style="background:red"</em>}}<br>{{<em>...</em>|<em>style="width:200px"</em>}}</td>
+<td>Mit % davor wird er mittig gesetzt. <br>Hat man eine ogg- und eine mp3-Datei, kann man so für Chrome, Firefox, etc. ogg und für Internet Explorer mp3 bereithalten.<br><br>Automatischer Start<br>Beginnt am Ende wieder neu<br>Beides<br>Farbiger Player  (hier z.B. rot)<br>Auf 2/3 verkürzter Player</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+<h4>Danksagung</h4>
+<p>Vielen Dank allen Betatestern, vor allem mhz, cmb, Ludwig, Tata, oldnema, ohne deren Vorschläge dieses Plugin nicht zu dem geworden wäre, was es jetzt ist.</p>
+<p>Vielen Dank auch den unbekannten Designern, deren Entwürfe im Internet wieder und wieder kopiert und modifiziert werden und die als Ausgangspunkt der Rahmen von Quoteoftheday dienten.</p>
+<ul>
+ <li>WoodenFrame abgeleitet von Datei angeboten in <a href="http://codeitdown.com" target="_blank">http://codeitdown.com</a>, das ist aber wohl nicht der ursprüngliche Designer.</li>
+ <li>Grunge abgeleitet von Datei auf <a href="http://galleryhip.com/distressed-frame-photoshop.html" target="_blank">http://galleryhip.com/distressed-frame-photoshop.html</a>, aber wohl auch nicht der ursprüngliche Designer.</li>
+ <li>Mit entsprechenden Suchbegriffen findet man im Internet eine riesige Auswahl an brauchbarem Rahmen.</li>
+</ul>
+</div></div>
+</body>
+</html>

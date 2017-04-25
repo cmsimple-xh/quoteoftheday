@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Helpfile: Quoteoftheday</title>
+<style type="text/css">
+body {background: #eaf4fb; font: normal normal normal 12pt/1.6 'trebuchet MS',sans-serif}
+.notice {margin-left:3em; font-style:italic; color:#050; font-size:92%;}
+.new {margin:0 0 0 3em;font-size:92%; color:#400}
+code {font-family: consolas, 'courier new', monospace; font-weight:bold; font-size: 90%; color:#900;}
+body div {width: 940px; margin: 3em auto; background: #eee; border: 1px solid #5ab; padding: 0;box-shadow: 0em 0em 2em 0em #bbd;border-radius: 4.5em;}
+body div div {width: 760px; margin: 30px auto; background: #fff; border: 2px solid #8de; padding: 0 56px 3em;border-radius: 3em;}
+p {margin:1em 0;}
+em, b {font-weight: bold; color:#004;}
+.red {color:red;font-weight:bold;}
+h2, h3, h4, h5, h6 {font-family: Georgia; color: #099;margin:1.5em 0 0;}
+h1 {font: normal normal 30pt Georgia, 'Times new roman', serif;margin:1em 0;color: #068; }
+</style>
+</head>
+<body>
+<div>
+<div>
+<h1 >Vitajte v Quoteoftheday_XH 0.7</h1>
+<h4 ><b>Testované s CMSimple_XH 1.5.3 a CMSimple 3.4</b></h4>
+<h3 ><b>Update z predchádzajúcich verzií</b></h3>
+<p >Nainštalujte novou verziu pro zachovaní Vášho pôvodného súboru quoteoftheday/data/quote_xx.txt. Prejdite do hlavného nastavenia pluginu quoteoftheday a za každým citátom vložte nový oddeľovač (default: ===). Môžete tiež vložiť značku pre druhý riadok citátu (default: -) pre každý druhý riadok jednotlivých citátov. Uložte zmeny. Niekedy sa stane, že pri zobrazení prvého citátu sa ich zobrazí naraz viac. V takom prípade obnovte ešte raz generovanie citátov vymazaním <span ><b>last quote update </b></span>v nastavení jazyka.</p>
+<h2 ><b>Vkladanie a úprava citátov</b></h2>
+<ul>
+  <li >Prečítajte si pokyny nad editačným oknom v hlavnom nastavení pluginu.<span class="Apple-converted-space"> </span></li>
+  <li >Citáty sú závislé na jazyku. Pre každý jazyk teda môžete mať vlastný súbor citátov. Citáty v rámci jedného jazyka sa môžu aj opakovať.</li>
+  <li >Oddeľovač (napr. ===) môže byť doplnený (pred aj za) prázdnymi riadkami pre lepšiu čitateľnosť.<span class="Apple-converted-space">  </span>Nemá to však žiadny vpolyv na konečné zobrazenie.</li>
+  <li ><span >Ak riadok začína značkou (napr. -), použije sa osobitné formátovanie. Aj </span>značka môže byť doplnená (pred aj za) prázdnymi riadkami pre lepšiu čitateľnosť.<span class="Apple-converted-space">  </span>Ani toto však nemá žiadny vplyv na konečné zobrazenie.</li>
+  <li >Nový odstavec vždy začína po prázdnom riadku (alebo po dosiahnutí značky na začiatku riadku. Pre jednoduché zalomenie použite / na konci riadku.</li>
+</ul>
+<h2 ><b>Nastavenie v jazykovom súbore</b></h2>
+<ul >
+  <li ><span ><b><i>náhodne:</i></b></span> Ak chcete, aby sa Vaše citáty zobrazovali v náhodnom poradí, napíšte sem čokoľvek (napr. <span ><b>yes</b></span>). Náhodný výber je vhodný, ak máte viac ako 20 citátov. Ak tu nič neuvediete, zobrazovanie bude sekvenčné. V prvý deň v roku (1. január) sa zobrazí citát č. 1, v ďalší deň citát č. 2 atď, až po posledný citát, po ktorom sa začnú znovu postupne zobrazovať citáty od č. 1.</li>
+  <li ><span ><b><i>headline:</i></b></span> Ak chcete Vaše citáty zobrazovať pod nejakým spoločným nadpisom, môžete v nastavení jazyka uviesť napr.: <span ><b>Myšlienka na dnešný deň</b></span>.</li>
+</ul>
+<h2 ><b>Css styling</b></h2>
+<ul >
+  <li >Citáty sú vždy umiestnené do kontajneru <span ><b>&lt;div class="quoteoftheday"&gt;</b></span>. Pomocou css teda môžete tento kontainer ľubovoľne upravovať (pozadia, okraje, farby, písmo, zarovnanie, obtekanie a pod.).</li>
+  <li >Samotné riadky citátov sú vkladané ako odstavce <span ><b>&lt;p&gt;</b></span>. Ak začnete nový riadok značkou, vytvorí sa nový odstavec <span ><b>&lt;p class="quoteline2"&gt;</b></span> (alebo 3, or 4). Pre tento prípad sú (môžu byť) vytvorené samostatné CSS-triedy. Pozrite si obsah anglického súboru, aby ste videli, ako sa to robí.</li>
+</ul>
+<h2 ><b>Použitie Quoteoftheday</b></h2>
+<ul >
+  <li ><span >na konkrétnej stránke:<br>
+</span><b>{{{PLUGINS:quoteoftheday();}}}</b></li>
+  <li ><span >v template:<br>
+</span><b>&lt;?php echo quoteoftheday(); ?&gt;</b></li>
+</ul>
+</div></div>
+</body>
+</html>

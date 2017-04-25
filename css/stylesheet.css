@@ -1,0 +1,238 @@
+/* This is the surrounding div for the quotes,
+necessary for some css3 effects */
+.quoteoftheday{
+  position: relative;
+  z-index:1;
+  width:100%;
+}
+.quoteoftheday img, .quoteoftheday audio {
+    max-width:100%;
+    height:auto;
+}
+
+/* The selectable divs, in which the quotes
+are shown. You may add more, the names
+start with .quote_ */
+
+.quote_Standard {
+    margin:1em auto;
+    border:10px solid #eee;
+    padding:0.5em 1em;
+    max-width:300px;
+    border-radius: 20px;
+    box-shadow:8px 8px 8px #aaa;
+    /* clear:both; */
+}
+
+
+.quote_NoBorder {
+    margin:2em auto;
+    max-width:400px;
+}
+
+
+.quote_DoubleBorder {
+    margin:2em auto;
+    border:5px solid transparent;
+    box-shadow:
+                0  -2px 0 0 #000 inset,
+               -2px 0   0 0 #000 inset,
+                0   2px 0 0 #000 inset,
+                2px 2px 0 0 #000 inset;
+    padding:2.5em;
+    max-width:400px;
+    outline:6px solid #798;
+}
+
+
+.quote_FullWidth {
+    margin:1em auto;
+    border:5px solid #ddd;
+    padding:1em;
+    border-radius: 5px;
+}
+
+
+.quote_Curl {
+    position: relative;
+    max-width: 350px;
+    padding: 2.5em 3em 2em;
+    background:#eee;
+    background-image: linear-gradient(left, #eee 0%, #eee 10%, #fff 49%, #fff 60%, #eee 90%, #eee 100%);
+
+    /* color:black; */
+    box-shadow:2px 2px 0 0  rgba(0, 0, 0, 0.2);
+    /* border:1px solid #ddd; */
+    margin: 4em auto;
+}
+.quote_Curl:before,.quote_Curl:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 5px;
+    width: 50%;
+    top: 80%;
+    max-width:400px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(-3deg);
+}
+.quote_Curl:after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+
+
+.quote_Plate {
+    margin:1em auto;
+    border:7px solid #ddd;
+    border-radius:7px;
+    box-shadow:
+                0  -1px 0 0 #888 inset,
+               -1px 0   0 0 #888 inset,
+                0   1px 0 0 #888 inset,
+                1px 1px 0 0 #888 inset,
+
+                0   2px 0 0 #aaa,
+                2px 0   0 0 #aaa,
+                0  -2px 0 0 #aaa,
+               -2px 2px 0 0 #aaa,
+
+                3px 3px 5px 0 rgba(0,0,0,0.6),
+                1px 1px 5px 3px rgba(0,0,0,0.3) inset
+                ;
+    padding:2.5em;
+    background:#f4f4f4;
+    background-image: linear-gradient(top left, #aaa 0%, #ddd 10%, #fff 49%, #fff 60%, #ddd 90%, #aaa 100%);
+    color:black;
+    max-width:400px;
+    line-height:1.6;
+}
+
+
+.quote_Wood {
+    max-width:80%;
+    box-sizing: border-box;
+    margin:2em auto;
+    padding: 2em;
+    border: 25px solid #ccb089;
+    border-image: url('woodenframe.jpg') 50 65;
+    box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.3);
+    background:#fffaee;
+}
+.quote_Wood p:last-of-type {
+    margin-bottom:0;
+}
+
+.quote_Gold {
+    max-width:400px;
+    margin:2em auto;
+    padding: 2em;
+    border: 45px solid #ccb089;
+    border-image: url('goldenframe.png') 30 30 30 30;
+    box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.3);
+    background:#fffaee;
+}
+.quote_Gold p:last-of-type {
+    margin-bottom:0;
+}
+.quote_Gold audio {
+    opacity: .7;
+    background:#f90;
+    border-top:2px solid red;
+    border-bottom:2px solid red;
+}
+
+.quote_Grunge {
+    max-width:400px;
+    margin:0 auto;
+    padding: 0;
+    /* set border width to your liking */
+    border: 60px solid transparent;
+    border-image: url('grunge.gif') 100 130;
+}
+.quote_Grunge p:last-of-type {
+    margin-bottom:0;
+}
+.quote_Grunge audio {
+    border: 5px solid transparent;
+    border-right:none;
+    border-left:none;
+    border-image: url('irregular.gif') 6 3;
+}
+
+.quote_OldPaper {
+    max-width:400px;
+    margin:40px auto;
+    padding: 3em;
+    background: url('oldpaper.gif');
+    background-size:100% 100%;
+    color:#320;
+}
+.quote_OldPaper audio {
+    opacity: .5;
+    background:#630;
+}
+
+
+/* The general headline of
+the quotes. */
+.quoteoftheday h4, .quoteoftheday h5 {
+    margin-top:0;
+}
+
+/* paragraph classes within the quotes */
+.quote_author  {
+    text-align:right;
+}
+.quote_author:before {
+    content: "\2014";
+}
+
+.quote_smaller {
+    font-size:85%;
+}
+
+.quote_bigger {
+    font-size:140%;
+    line-height:1.3;
+}
+
+.quote_imgleft {
+    float:left;
+    margin-right:5px;
+}
+
+.quote_imgright {
+    float:right;
+    margin-left:5px;
+}
+
+.quoteoftheday .quote_imgcenter {
+    display:block;
+    margin:0 auto;
+}
+
+.quote_indent {
+    padding-left:2rem;
+}
+
+.quote_center {
+    text-align:center;
+}
+
+.quote_right {
+    text-align:right;
+}
+
+.quote_narrow1 {
+    padding:0 5% 0 10%;
+}
+.quote_narrow2 {
+    padding:0 8% 0 17%;
+}
+.quote_narrow3 {
+    padding:0 12% 0 25%;
+}

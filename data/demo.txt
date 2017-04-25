@@ -1,0 +1,73 @@
+filetype=quoteoftheday|version=1|frame=DoubleBorder|headline=Demo|selection=random|timing=daily
+===
+!Simple intuitive markup 
+
+**Bold** and //italic// and __underlined__ are easy.
+
+A new paragraph is started after an empty line*.
+
+?*) Or after a paragraph class trigger at the beginning of a line.
+===
+>!Lists
+
+# This is an ordered list.
+# It has 3 points,
+# this is the last one.
+
+* This is an unordered list
+* with several list items,
+* however nesting of lists is not supported.
+===
+>>
+!Poem Presentation
+
+Thou laughest that a child/
+  cries o'er its broken doll;/
+The things o'er which thou mournest/
+  are they not playthings all?
+
+- Angelus Silesius
+===
+!Indentation
+
+Some text text text text text text text text text text text text text text text text text text text text.
+  Here comes an indent line line the first line of a paragraph in print. 
+
+* Indentation works also in Lists. 
+    You can start an indented line within the list item.
+* The next list item.
+* And another one.
+===
+![[http://cmsimple-xh.org|Links]]
+
+Links can be internal or external:
+[[./plugins/quoteoftheday/help/help.htm|An internal link]]
+
+Links to PDFs or other files in the download folder are created by entering code like 
+
+//[////[./userfiles/downloads/mypdf.pdf|my PDF file]]//
+
+**N.B.:** Internal links are language dependent, If you use the quote from another language, the link may not work.
+===
+!%Images
+
+* {{flags/en.gif}} Images are inserted with the filebrowser.
+* [[http://cmsimple-xh.org|{{flags/de.gif}}]] This image is a link.
+
+{{flags/cs.gif|style="width:100px"}} This image is enlaged, but has no positioning. 
+
+{{flags/de.gif |width="50"}}{{ flags/de.gif|width="50"}}You can float your images to the right or left.
+
+%{{ flags/da.gif |width="100"}}
+This image is centered
+===
+?%%Right aligned
+
+!%Centered
+
+%We pray: our Lord and Master,/
+we do thy mighty will./
+Behold, God hath no will,/
+he is so deep and still.
+
+-% Angelus Silesius

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Quote of the day</title>
+<style type="text/css">
+body {
+    background: #999;
+    background-image: -moz-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: -webkit-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: -o-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: -ms-linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-image: linear-gradient(top left, #666 0%, #eee 49%, #eee 51%, #666 100%);
+    background-attachment:fixed;
+    font: normal normal normal 12pt/1.6 'trebuchet MS',sans-serif
+}
+.notice {margin-left:3em; font-style:italic; color:#050; font-size:92%;}
+.new {margin:0 0 0 3em;font-size:92%; color:#400}
+code, td:first-child {font-family: consolas, 'courier new', monospace; font-weight:bold; font-size: 90%; color:#900;}
+body div {width: 940px; margin: 3em auto; background: #eee; border: 1px solid #555; padding: 0;box-shadow: 0em 0em 2em 0em #bbb;border-radius: 4.5em;}
+body div div {width: 760px; margin: 30px auto; background: #fff; border: 2px solid #bbb; padding: 0 56px 3em;border-radius: 3em;}
+p {margin:1em 0;}
+strong {font-weight: bold; color:#004;}
+.red {color:#a00;font-weight:bold;}
+h2, h3, h4, h5, h6 {font-family: Georgia; color: #267;margin:1.5em 0 0;}
+h1 {font: normal normal 30pt Georgia, 'Times new roman', serif;margin:1em 0;color: #068; }
+table {width:100%; border-collapse:collapse;}
+table, th, td {border: 1px solid black;}
+td {padding:2px 1px 3px 6px;}
+th {background:#eee;}
+td:first-child {font-size:100%;text-align:center;width:8em;}
+td:first-child em{font-weight:normal;color:black}
+td p {margin:0}
+</style>
+
+
+
+</head>
+<body>
+<div>
+<div>
+<h1>Quoteoftheday_XH 1.1</h1>
+
+<p class="red">For CMSimple_XH >= 1.5.4 or CMSimple 4.x</p>
+
+<p><b>"Quote of the day"</b> creates a div box in which a quote is placed. This quote comes from one of several quote collections entered by the user in the backend. The quote is exchanged daily, weekly or monthly, at random or in a fixed order.</p>
+<p>The quotes are entered as plain text with simplified markup similar to wiki software.</p>
+
+<h3>New in version 1.1</h3>
+<ul>
+ <li>CSS-frames are now fully responsive. Quotes look good also in smartphones</li>
+ <li>Default saving location for quotes now in the userfiles. Saving location can be set in config with option list to  userfiles/ plugin (default up to Quoteoftheday 1.0)/ or as subfolder of the content folder.</li>
+<li>Small improvements in admin view.</li>
+</ul>
+
+<h3>New in version 1.0</h3>
+<ul>
+ <li>Quotes can contain links, images and audio files.<br>Links from a secondary language differ from links to the main language. These links are created at the beginning of the day when the plugin selects the quote. If you use the same quote in main and secondary language, the link will only work in one language, i.e. the language in which the quote is generated first. You can however copy the quote file to a new name and use two identical files, each for one language only.</i></li>
+ <li>Additional formatting possibilities</li>
+ <li>Selectable frames for the quotes</li>
+ <li>Filebrowser integration: The Quoteoftheday zip file contains also a file to be inserted in the filebrowser folder at plugins/filebrowser/editorhooks/quoteoftheday/ to manage the filename transfer. The unzipped Quoteoftheday file is a ready to use "plugins" folder to be inserted into the website base.</li>
+<li>Single quote view with preview, reordering and deleting possibility, next to the usual total view of all quotes of a quote file.</li>
+<li>Bugfix (0.8 + 0.9 would revert to the standard quote file after preview. Now fixed.)</li>
+</ul>
+
+<h3>Update to 1.1</h3>
+<p>Saving your old installed plugin before updating may always be prudent.</p>
+<p>Install the unzipped download into the base folder of CMSimple_XH. This will overwrite your old quoteofthedays plugin, add a file to the filebrowser plugin and add a folder for saving quotes to the userfiles. Your existing quote files should remain intact. Config settings have to be entered again.</p>
+
+<p>In case you made some changes to the css, save you old css file before the update and create later your custom css class as detailed in the next section.</p>
+
+
+<p>Updates from 0.5 and earlier version need entering after every quote the new quote separator <code>===</code> and the
+trigger for the author line <code>-</code>.</p>
+
+
+<h2>Quote Frames</h2>
+<p>Quotes are displayed in a frame, which is a div container with a selectable class. The class name is saved in the quote file header. You can easily create additional frame classes: Just enter a new class in the stylesheet.css, the name has to start with <code>.quote_</code>.</p>
+<p>Sometimes it is easier to edit one of the existing frame classes, e.g. by changing the value of <code>max-width</code> or adding a font color with <code>color:black;</code>. To prevent floating images overlapping the bottom quote border, add <code>clear:both;</code>. However in some templates this will affect the design, so a decision has to be made per case.</p>
+
+
+<h2>Calling Quoteoftheday</h2>
+<ul>
+<li>on a page in XH 1.6.5 or higher:<br>
+<code>{{{quoteoftheday}}}</code> oder <code>{{{quoteoftheday 'Dateiname'}}}</code>. The filename ending <code>.txt</code> doesn't have to be entered.<br>
+In older XH versions the old style method has to be used: <code>{{{PLUGIN:quoteoftheday();}}}</code> or
+<code>{{{PLUGIN:quoteoftheday('FILENAME');}}}</code>.<br>
+
+<b>Important:</b> In XH 1.6.5 and 1.6.6 there was a bug (fixed in 1.6.7), which invalidated a new style plugin call without "PLUGIN:" when on the same page another old style call with "PLUGIN:" was present. So either update to 1.6.7 or don't mix old and new calling styles on the same page.</li>
+<li>in the template:<br><code>&lt;?php echo quoteoftheday();?></code> or <code>&lt;?php echo quoteoftheday('FILENAME');?></code></li>
+</ul>
+
+
+<h2>Entering and editing quotes</h2>
+<p>Preset is the language specific quote file, e.g. for English <code>quote_en.txt</code>. Instead of selecting "Standard quote file" you can select quote_en.txt, which amounts to the same. You can create or delete quote files via the options menu. File names may not contain accented letters or spaces.</p>
+<table>
+<tbody>
+<tr><th>Code</th><th>Usage</th></tr>
+<tr>
+<td>===</td>
+<td>Quotes are separated by <code>===</code> in the quote file.</td>
+</tr>
+<tr>
+<td>Empty line</td>
+<td>A new paragraph in a quote is created via an empty line or via the use of a markup code. <strong>Entering a new line in the input will not create a new line in the output.</td>
+</tr>
+<tr>
+<td>/</td>
+<td><u>At the end of a line:</u> Line break within a paragraph, e.g. useful for poems.</td>
+</tr>
+<tr>
+<td>**<em>...</em>**<br>//<em>...</em>//<br> __<em>...</em>__</td>
+<td><strong>bold</strong><br><em>italic</em><br><span style="text-decoration: underline;">underlined</span></td>
+</tr>
+<tr>
+<td><em>paragraph triggers:</em><br>-<em>Text...</em><br>?<em>Text...</em><br>!<em>Text...</em><br>%<em>Text...</em><br>%%<em>Text...</em></td>
+<td><u>At the beginning of a line:</u> creates new paragraph with css-class:<br>— dash and right aligned (for author's name)<br>smaller font<br>bigger font<br>centered (takes 2nd place combined with other codes, e.g. <code>!%</code>)<br>right aligned (takes 2nd place in code combinations)</td>
+</tr>
+<tr>
+<td>* <em>Text...</em><br>* <em>Text...</em></td>
+<td>
+<ul>
+<li>Text</li>
+<li>Text</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td># <em>Text...</em><br># <em>Text...</em></td>
+<td><ol>
+<li>Text</li>
+<li>Text</li>
+</ol></td>
+</tr>
+<tr>
+<td>2-4 spaces</td>
+<td><u>At beginning of a line:</u> Creates new indented line, works also inside of list items, doesn't create a new paragraph.</td>
+</tr>
+<tr>
+<td>><br>>><br>>>></td>
+<td><u>At start of quote:</u><br>If the width of the quote frame is too large for a certain quote, you can narrow down the width for this quote in 3 steps.</td>
+</tr>
+<tr>
+<td>[[<em>URL</em>|<em>Text</em>]]</td>
+<td>Creates a link, e.g. <br>external: [[http://cmsimple-xh.org|XH-Website]] <br>internal: [[?Start|to the start page]]</td>
+</tr>
+<tr>
+<td><br>{{<em>image.jpg</em>}}<br><br><br>{{ <em>image.jpg</em>}}<br>{{<em>image.jpg</em> }}<br>{{ <em>image.jpg</em> }}<br><br>{{<em>image.jpg</em>|<em>width="300"</em>}}<br>{{ <em>image.jpg</em> |<em>width="300"</em>}}<br><br>{{<em>...</em>|<em>style="width:300px"</em>}}<br>{{<em>...</em>|<em>alt="xxx"</em>}}<br>%{{<em>image.jpg</em>}}<br>%%{{<em>image.jpg</em>}}</td>
+<td>Image files  are inserted with the filebrowser at the position of the cursor. An alt value is generated automatically.<br><br>Note: The position of the spaces triggers the floating!<br>Floating to the right.<br>Floating on the left.<br>Centered.<br><br>Set to a width of 300px.<br>Centered and set to a width of 300px.<br><br>Alternative way to set width or other css-values.<br>xxx as alt-value instead of automatically generated one.<br>Centered image (no float) via paragraph trigger code.<br>Image right aligned via paragraph trigger.</td>
+</tr>
+<tr>
+<td>{{<em>Sound.mp3</em>}}</td>
+<td>Audio files (mp3, wav, ogg) are entered like image files via the filebrowser and get automatically a title value. On the page the player of the browser is shown, e.g. in Firefox:<br><img src="player.png" alt="player.png, 2,3kB" title="Player" height="35" width="300"><br>Usually one will place the player into its own paragraph, i.e. at the start of the quote, or after an empty line, or after a paragraph trigger code, e.g. <code>%</code>, so that the player doesn't overlap any text of the quote.<br><small>Floating of the player not implemented as in images. No flash fallback, Internet Explorer 8 won't show anything.</small></td>
+</tr>
+<tr>
+<td>%{{<em>Sound.mp3</em>}}<br><br>{{<em>Sound.ogg,mp3</em>}}<br><br>{{<em>Sound.mp3</em>|<em>autoplay</em>}}<br>{{<em>Sound.mp3</em>|<em>loop</em>}}<br>{{<em>...</em>|<em>autoplay loop</em>}}<br>{{<em>...</em>|<em>style="background:red"</em>}}<br>{{<em>...</em>|<em>style="width:200px"</em>}}</td>
+<td>% in front put the player in a centered paragraph. <br>If you have both an ogg- and an mp3 file, you can present Chrome, Firefox, etc. with ogg and Internet Explorer with mp3.<br><br>Automatic start<br>Loop<br>Both<br>Colored player  (here red)<br>To 2/3rd shortened player</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+
+
+<h4>Acknowledgements</h4>
+<p>With the help of suggestions from all beta testers, especially mhz, cmb, Ludwig, Tata and oldnema, this plugin has become what it is now.</p>
+<p>I would like to thank those unknow designers, on whose work some of the frames of Quoteoftheday are based. You can find innumerable useful frames in the internet, sometimes the same designs on multiple sites, where the original creator isn't mentioned.</p>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?php
+
+$plugin_tx['quoteoftheday']['cf_css_activated']="Wird automatisch gesetzt";
+$plugin_tx['quoteoftheday']['cf_totalview']="Wird automatisch gesetzt";
+$plugin_tx['quoteoftheday']['cf_headline_html']="Paragraph/Überschrift-Typ für die allgemeine Überschrift der Zitate.";
+$plugin_tx['quoteoftheday']['cf_path_quotes']="Hier stellen Sie ein, wo die Zitate-des-Tages gespeichert werden.<br><br>Wenn Sie diese Einstellung ändern, und Quoteoftheday alte Zitate wiederfinden soll, müssen diese per Hand zum neuen Speicherort verschoben werden.<br><br>Bei Einstellung \"Content\" werden Zitate unterschiedlicher Sprachen in unterschiedlichcn Ordnern gespeichert. Sonst werden sie im selben Ordner gespeichert, entweder im Quoteoftheday-Plugin-Ordner oder den Userfiles.<br><br>Für CMSimple 4.x oder ältere XH-Versionen: 'userfiles', 'plugin' oder 'content' eingeben.";
+$plugin_tx['quoteoftheday']['cf_select_css_classes']="Durch Kommata getrennte Liste der Rahmen-Klassen, die den Zitatdateien zugeordnet wrden können. In der CSS-Datei muss außerdem eine entsprechende Klasse beginnend  mit .quote_ und danach dem neuen Namen eingetragen werden.";
+$plugin_tx['quoteoftheday']['file-manager_create_new_file']="Neue Datei erstellen";
+$plugin_tx['quoteoftheday']['file-manager_delete_file']="Datei löschen";
+$plugin_tx['quoteoftheday']['file-manager_enter_new_file_name']="Geben Sie hier einen neuen Dateinamen ein.";
+$plugin_tx['quoteoftheday']['file-manager_standard_quotefile']="Standard Zitatdatei";
+$plugin_tx['quoteoftheday']['file-manager_wrong_char']="<b>Fehler:</b> Falsches Zeichen im Dateinamen. Nur <b>a-z A-Z _ - . 0-9</b> erlaubt.";
+$plugin_tx['quoteoftheday']['insert_audio']="Audio";
+$plugin_tx['quoteoftheday']['insert_image']="Bilder";
+$plugin_tx['quoteoftheday']['instruction_bold']="fett";
+$plugin_tx['quoteoftheday']['instruction_break']="(am Zeilenende) /&nbsp;⇒&nbsp;neue Zeile";
+$plugin_tx['quoteoftheday']['instruction_divider_between_quotes']="Zitattrenner&nbsp;=== (Eingefügt am Zitatende ⇒ neues Zitat danach)";
+$plugin_tx['quoteoftheday']['instruction_img']="Bilder/Audios werden <b>an Cursorposition eingefügt,</b> Bild links: {{Bild.jpg&nbsp;}}, rechts: {{&nbsp;Bild.jpg}}, zentriert: {{&nbsp;Bild.jpg&nbsp;}}";
+$plugin_tx['quoteoftheday']['instruction_italic']="kursiv";
+$plugin_tx['quoteoftheday']['instruction_less']="... weniger";
+$plugin_tx['quoteoftheday']['instruction_links']="Link: [[Linkadresse|Linktext]]";
+$plugin_tx['quoteoftheday']['instruction_more']="mehr ...";
+$plugin_tx['quoteoftheday']['instruction_narrower']="(am Zitatanfang) >, >>, >>> eingerückter Zitatbereich";
+$plugin_tx['quoteoftheday']['instruction_new_paragraph']="Leerzeile ⇒ neuer Absatz";
+$plugin_tx['quoteoftheday']['instruction_paragraph_class_trigger']="(am Zeilenanfang) -&nbsp;Autor, !&nbsp;größer, ?&nbsp;kleiner, %&nbsp;zentriert, %%&nbsp;rechts, 2 Leerzeichen ⇒ eingerückte Zeile, #+Leerzeichen ⇒ nummerierte Liste, *+Leerzeichen ⇒ Punktliste";
+$plugin_tx['quoteoftheday']['menu_css']="Rahmen-Css";
+$plugin_tx['quoteoftheday']['menu_language']="Sprachdatei";
+$plugin_tx['quoteoftheday']['menu_main']="Zitateingabe";
+$plugin_tx['quoteoftheday']['select_daily']="täglich";
+$plugin_tx['quoteoftheday']['select_frame']="Zitatrahmen";
+$plugin_tx['quoteoftheday']['select_headline']="Überschrift";
+$plugin_tx['quoteoftheday']['select_monthly']="monatlich";
+$plugin_tx['quoteoftheday']['select_quote_selection']="Zitatauswahl";
+$plugin_tx['quoteoftheday']['select_quotes']="Zitate";
+$plugin_tx['quoteoftheday']['select_random']="zufällig";
+$plugin_tx['quoteoftheday']['select_sequential']="der Reihe nach";
+$plugin_tx['quoteoftheday']['select_standard']="Standard";
+$plugin_tx['quoteoftheday']['select_timing']="Zitatänderung";
+$plugin_tx['quoteoftheday']['select_weekly']="wöchentlich";
+$plugin_tx['quoteoftheday']['show_all_quotes']="Gesamtbearbeitung";
+$plugin_tx['quoteoftheday']['show_single_quotes']="Einzelbearbeitung";
+$plugin_tx['quoteoftheday']['start_preview']="Gesamtvorschau";
+$plugin_tx['quoteoftheday']['start_regroup']="Umsortieren zu";
+$plugin_tx['quoteoftheday']['start_return']="Zurück";
+$plugin_tx['quoteoftheday']['title_add']="Fügt leeres Zitat nach aktivem Zitat an";
+$plugin_tx['quoteoftheday']['title_delete']="Löscht das aktive Zitat";
+$plugin_tx['quoteoftheday']['title_end_add']="Fügt ein leeres Zitat ans Ende der Liste an";
+$plugin_tx['quoteoftheday']['warning_ie8']="Zitatbearbeitung funktioniert mit Internet Explorer 8 nur in 'Gesamtbearbeitung' und ohne Bild/Ton-Einfügen";
+$plugin_tx['quoteoftheday']['warning_noselection']="Bitte erst ein Zitat auswählen";
+$plugin_tx['quoteoftheday']['warning_save_mode']="<b>Ein Problem liegt vor:</b> Ihre PHP-Installation enthält die Einstellung <b>save_mode=on</b>. Diese Einstellung bewirkt, dasss PHP keine brauchbaren Ordner erstellen kann. (Neue Ordner haben den falschen UNIX-Besitzer.) Eine mögliche Abhilfe ist, den fehlenden Ordner <b>auf dem eigenen Computer zu erstellen</b> (leer) und ihn anschließend per ftp an die richtige Stelle hochzuladen.";
+
+?>

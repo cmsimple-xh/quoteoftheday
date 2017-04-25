@@ -1,0 +1,58 @@
+CHANGELOG Quoteoftheday
+
+v. 1.1  (07/2015) - added css-activation routine for the combined xh-pluginstylesheet, as
+                    a new installation on localhost does usually not trigger a recompilation of
+                    the xh-pluginstylesheet.
+                  - Improved responsive css-styles, so that borders, images and the audioplayer
+                    come out nicely also in smartphones
+                  - Equal width of numbered buttons for quote selection
+                  - Instructions of text entering enlarged with java script more/less selection,
+                    selection saved in cookie, config option to hide instructions deleted
+                  - Path to quotes selectable from option list: plugin/userfiles/content,
+                    default location: userfiles
+                  - Filebrowser call prepared for XH 1.7, however nothing is certain yet ...
+
+v. 1.0  (04/2015) - Bugfix (going back from preview would set selected quotefile
+                    back to the standard language quotefile :-(
+                  - Links
+                  - Standard filebrowser support for image + sound files
+                  - Images with automatic alt setting, right/left floating or center positioning, and
+                    css attributes optional
+                  - Audio files as html5 audio, 2 file sources (ogg + mp3)) possible, loop, autoplay, css
+                  - Additional formatting: lists, indented, centered, right aligned text
+                  - Single quote view with reorder, delete and add quotes buttons
+                  - Selectable css frames around quotes, saved in quote file header
+                  - New German + English help files
+                  - Scroll position kept after return
+
+v. 0.9  (03/2014) - Corrected  license link, which had become invalid in XH 1.6
+                  - added metaconfig.php
+                  - added possibility of weekly and monthly changes of quotes
+
+v. 0.8  (10/2012) - Now selection between different quote files possible, 
+                  - Interface for selecting, creating and erasing files added
+                  - Headline & random/sequential selection stored in quote
+                  - Czech translation by oldnema (thanks for testing)
+                  - Slovak translation by Tata (thanks for testing)
+                  - Bug correction reported by Tata and oldnema
+
+v. 0.7  (09/2012) - Preview added + display nr of quotes
+
+v. 0.6  (09/2012) - Complete reprogramming
+                  - number of paragraphs not limited per quote
+                  - different paragraph styles can be freely mixed
+                  - bold and italic possible
+                  - configurable paths
+                  - new help file as usage has completely changed. 
+                    Unfortunately Tata's Slovak help file became obsolete.
+
+v. 0.5  (12/2010) - Slovak Help file + some feedback by Tata,
+                  - small code improvement, 
+                  - plugin validates with CMSimple_XH 1.3
+
+v. 0.4  (11/2910) - bug-fixing, 
+                  - multi-language capability, UTF-8, ready for CMSimple_xh 1.2, 
+                  - better headline css
+v. 0.3  (03/2009) - random selection of quote added, clean-up of code
+v. 0.2  (02/2009) - text before and after quotes added, first commercial use of Quoteoftheday
+v. 0.1  (02/2009) - sequential selection of quote according to day of the year 
