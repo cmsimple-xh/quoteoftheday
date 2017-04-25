@@ -15,9 +15,9 @@ if ((!function_exists('sv')))die('Access denied');
 define('QUOTEOFTHEDAY_VERSION', '1.1');
 define('QUOTEOFTHEDAYDATA_VERSION', '1');
 
-initvar('quoteoftheday');
-
-if($quoteoftheday){
+if (function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministration('quoteoftheday')
+   || isset($quoteoftheday) && $quoteoftheday === 'true'
+) {
 
     $o .= "\n\n<!-- Quoteoftheday Plugin -->\n\n";
     $plugin = basename(dirname(__FILE__),"/");
