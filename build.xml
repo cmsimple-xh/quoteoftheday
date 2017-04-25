@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Quoteoftheday" default="help">
+
+    <target name="help" description="lists available targets">
+        <exec command="phing -l" outputProperty="help"/>
+        <echo>${help}</echo>
+    </target>
+
+    <target name="build" description="builds distributable ZIP archive">
+        <fail unless="version" message="version is not defined!"/>
+        <exec command="git archive -o export.tar HEAD" checkreturn="true"/>
+        <untar file="export.tar" todir="export"/>
+        <delete file="export.tar"/>
+        <move todir="dist/plugins/quoteoftheday">
+            <fileset dir="export">
+                <exclude name="build.xml"/>
+                <exclude name="composer.*"/>
+                <exclude name="demo.txt"/>
+                <exclude name="pax_global_header"/>
+            </fileset>
+        </move>
+        <mkdir dir="dist/userfiles/plugins/quoteoftheday"/>
+        <move file="export/demo.txt"
+              tofile="dist/userfiles/plugins/quoteoftheday/demo.txt"/>
+        <mkdir dir="dist/plugins/filebrowser/editorhooks/quoteoftheday"/>
+        <copy file="dist/plugins/quoteoftheday/editorhook.php"
+              tofile="dist/plugins/filebrowser/editorhooks/quoteoftheday/script.php"/>
+        <delete dir="export"/>
+        <zip destfile="quoteoftheday_XH_${version}.zip" basedir="dist"/>
+        <delete dir="dist"/>
+    </target>
+
+</project>
