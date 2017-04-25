@@ -3,7 +3,7 @@
 /**
  * Quoteoftheday
  * Backend
- * @version 1.1, July 2015
+ * @version 1.1.1, April 2017
  * @author svasti
  */
 
@@ -12,7 +12,7 @@
 if ((!function_exists('sv')))die('Access denied');
 
 
-define('QUOTEOFTHEDAY_VERSION', '1.1');
+define('QUOTEOFTHEDAY_VERSION', '1.1.1');
 define('QUOTEOFTHEDAYDATA_VERSION', '1');
 
 if (function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministration('quoteoftheday')

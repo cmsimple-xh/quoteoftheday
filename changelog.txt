@@ -1,5 +1,7 @@
 CHANGELOG Quoteoftheday
 
+v. 1.1.1(04/2017) see <https://github.com/cmsimple-xh/quoteoftheday/milestone/1?closed=1>
+
 v. 1.1  (07/2015) - added css-activation routine for the combined xh-pluginstylesheet, as
                     a new installation on localhost does usually not trigger a recompilation of
                     the xh-pluginstylesheet.

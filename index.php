@@ -1,7 +1,7 @@
 <?php
 /**
  * Quoteoftheday
- * @version 1.1 (July 2015)
+ * @version 1.1.1 (April 2017)
  * @by svasti (svasti@svasti.de)
  */
 
