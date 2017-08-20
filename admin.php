@@ -245,8 +245,7 @@ if (function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrat
                . '</span></h2>'."\n"
                . '<p style="font-size:80%; line-height:1.2; font-family: sans-serif;display:none" id="license">'
                . 'This plugin is free software under the terms of the GNU General Public License v. 3 or '
-               . 'later, analog to <a href="' . $sn . '?' . uenc($cf['menu']['legal']) . '">'
-               . $cf['menu']['legal'] . '</a><br><br></p>'."\n" ;
+               . 'later<br><br></p>'."\n" ;
 
             // IE8 warning
             $o .= '<!--[if lte IE 8]><p class="cmsimplecore_warning">'
