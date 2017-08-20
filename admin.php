@@ -36,7 +36,8 @@ if (function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrat
         $config = file_get_contents($pth['folder']['plugins'].'quoteoftheday/config/config.php');
         $config = preg_replace('!css_activated\'\]\="(.)?"!','css_activated\']="true"', $config);
         file_put_contents($pth['folder']['plugins'].'quoteoftheday/config/config.php',$config);
-        include $pth['folder']['plugins'].'quoteoftheday/config/config.php';
+        header('Location: ' . CMSIMPLE_URL . '?' . $_SERVER['QUERY_STRING'], true, 302);
+        exit;
     }
 
     // if "edit all quotes together" has been choosen, write this into the config
